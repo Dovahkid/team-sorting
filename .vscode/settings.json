@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "*.gitignore": "cpp"
+        "*.gitignore": "cpp",
+        "random": "cpp"
     }
 }
