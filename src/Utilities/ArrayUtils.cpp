@@ -1,18 +1,12 @@
-#pragma once
-
 #include <iostream>
 #include <memory>
 #include <random>
+
+#include "ArrayUtils.h"
+
 using namespace std;
 
-namespace ArrayUtils 
-{
-    
-    int* randomFillArray(int max, int size);
-
-    /* Runs through the array printing to the terminal*/
-    void printArray(int* arr, int size);
-
+namespace ArrayUtils {
     int* randomFillArray(int max, int size) {
         random_device rd;
         int *arr{new int[size]{}};
