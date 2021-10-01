@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "*.gitignore": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "xutility": "cpp",
+        "initializer_list": "cpp",
+        "type_traits": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp"
     }
 }
