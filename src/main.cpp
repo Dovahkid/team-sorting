@@ -14,11 +14,7 @@
 #include ".\Tests\quickSortTest.cpp"
 #include ".\Tests\selectionSortTest.cpp"
 
-#include ".\Utilities\timerUtility.hpp"
-#include <tuple>
-
 using namespace std;
-using timerUtils::Timer;
 
 // template<typename T>
 // void print(T&& str) {
@@ -33,7 +29,7 @@ using timerUtils::Timer;
 
 int main() {
 
-    
+    insertionSortTest();
 
     return 0;
 }
