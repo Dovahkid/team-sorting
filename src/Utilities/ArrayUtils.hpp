@@ -89,7 +89,7 @@ namespace ArrayUtils {
             // then it places that value in the array that many times
             case DUPLICATES:
                 randomNum = gen() % (settings.max+1);
-                randomDuplicates = gen() % (settings.size%3);
+                randomDuplicates = gen() % (settings.size%11);
                 for(int i = 0; i < settings.size; i++) {
                     for (int j = 0; j < randomDuplicates && i + j < settings.size; j++) {
                         arr[i] = randomNum;

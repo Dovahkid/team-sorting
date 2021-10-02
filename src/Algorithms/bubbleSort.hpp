@@ -1,3 +1,5 @@
+#pragma once
+
 void bubbleSort(int arr[], int n) {
     bool notSorted = true;
     int i, j, temp;

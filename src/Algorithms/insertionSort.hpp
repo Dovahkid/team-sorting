@@ -1,3 +1,5 @@
+#pragma once
+
 void insertionSort(int arr[], int length) {
     int i, j, key;
     bool reverseSorted = true;
