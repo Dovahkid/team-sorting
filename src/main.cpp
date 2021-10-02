@@ -14,22 +14,26 @@
 #include ".\Tests\quickSortTest.cpp"
 #include ".\Tests\selectionSortTest.cpp"
 
+#include ".\Utilities\timerUtility.hpp"
+#include <tuple>
+
 using namespace std;
+using timerUtils::Timer;
 
-template<typename T>
-void print(T&& str) {
-    cout << str << endl;
-}
+// template<typename T>
+// void print(T&& str) {
+//     cout << str << endl;
+// }
 
-template<typename T, typename ...Args>
-void print(T&& str, Args ...args) {
-    cout << str << " ";
-    print(args...);
-}
+// template<typename T, typename ...Args>
+// void print(T&& str, Args ...args) {
+//     cout << str << " ";
+//     print(args...);
+// }
 
 int main() {
 
-    print(1,'a', "string", 1.003f, 3.001, true);
+    
 
     return 0;
 }
