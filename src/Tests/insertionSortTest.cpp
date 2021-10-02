@@ -11,7 +11,7 @@ using namespace std;
 void insertionSortTest() {
 
 
-    RandomFillSettings randomFill { .size = 10000, .max = 10000, .mode = FULL_RANDOM };
+    RandomFillSettings randomFill { .size = 10000, .max = 10000, .mode = FULL_RANDOM }; // if youre using an error checker it will flag this line and similar lines as an error, just ignore that.
     RandomFillSettings duplicateFill { .size = 10000, .max = 10000, .mode = DUPLICATES };
     RandomFillSettings reverseFill { .size = 10000, .max = 10000, .mode = REVERSE_SORTED };
     RandomFillSettings mostlySortedFill { .size = 10000, .max = 10000, .mode = MOSTLY_SORTED };
