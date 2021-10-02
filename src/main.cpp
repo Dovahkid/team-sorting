@@ -16,9 +16,20 @@
 
 using namespace std;
 
+template<typename T>
+void print(T&& str) {
+    cout << str << endl;
+}
+
+template<typename T, typename ...Args>
+void print(T&& str, Args ...args) {
+    cout << str << " ";
+    print(args...);
+}
+
 int main() {
 
-    insertionSortTest();
+    print(1,'a', "string", 1.003f, 3.001, true);
 
     return 0;
 }

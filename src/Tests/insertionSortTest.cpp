@@ -9,7 +9,7 @@ using namespace std;
 void insertionSortTest() {
 
 
-    RandomFillSettings randomFill { .size = 10, .max = 10 };
+    RandomFillSettings randomFill { .size = 10, .max = 10, .mode = FULL_RANDOM };
     RandomFillSettings duplicateFill { .size = 10, .max = 10, .mode = DUPLICATES };
     RandomFillSettings reverseFill { .size = 10, .max = 10, .mode = REVERSE_SORTED };
     RandomFillSettings mostlySortedFill { .size = 10, .max = 10, .mode = MOSTLY_SORTED };
@@ -24,7 +24,6 @@ void insertionSortTest() {
     cout << "Duplicate Fill: "; printArray(arr_duplicate, duplicateFill.size);
     cout << "Reverse Fill: "; printArray(arr_reverse, reverseFill.size);
     cout << "Mostly Filled Fill: "; printArray(arr_mostlySorted, mostlySortedFill.size);
-
 
     insertionSort(arr_random, randomFill.size);
     insertionSort(arr_duplicate, duplicateFill.size);
