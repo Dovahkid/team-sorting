@@ -24,7 +24,7 @@ The time it took for each algorithm to run on the different data sets will be pr
 
 This folder contains the ArrayUtils and TimerUtils
 
-#### ArrayUtils
+### ArrayUtils
 
 ArrayUtils contains functions such as two overloaded randomFillArray, printArray, and swap
 
@@ -57,7 +57,7 @@ Also note that when declaring the struct like
 If you are using an IDE such as VS Code which syntax highlighting it may underline the . in .size, .max, and .mode and claim there are errors.
 It is safe to ignore this, idk why it thinks this is a problem but it compiles just fine.
 
-#### TimerUtils
+### TimerUtils
 
 TimerUtils file has 2 members; A struct called Timer and a function called timer.
 The struct when created will record the time then when it goes out of scope the destructor is called. 
