@@ -26,6 +26,8 @@ void insertionSortTest() {
     // cout << "Reverse Fill: "; printArray(arr_reverse, reverseFill.size);
     // cout << "Mostly Filled Fill: "; printArray(arr_mostlySorted, mostlySortedFill.size);
 
+    cout << "\n<------= Insertion Sort =------>" << endl;
+
     cout << "Full Random sort ";
     timer([arr_random, randomFill]()->void{
         insertionSort(arr_random, randomFill.size);
@@ -45,6 +47,8 @@ void insertionSortTest() {
     timer([arr_mostlySorted, mostlySortedFill]()->void{
         insertionSort(arr_mostlySorted, mostlySortedFill.size);
         });
+
+    cout << "<------=================------>" << endl;
 
     // cout << "\nAfter sort" << endl;
     // cout << "Random Fill: "; printArray(arr_random, randomFill.size);

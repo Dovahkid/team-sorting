@@ -18,7 +18,13 @@ using namespace std;
 
 int main() {
 
+    bubbleSortTest();
+    exchangeSortTest();
+    // heapSortTest();
     insertionSortTest();
+    // mergeSortTest();
+    // quickSortTest();
+    selectionSortTest();
 
     return 0;
 }
