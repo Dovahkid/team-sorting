@@ -4,7 +4,7 @@ This repo is for CSC-2710 Team Project 1.
 The goal is to write and test 7 different sorting algorithms. Bubble, exchange, heap, insertion, merge, quick, and selection sort.
 
 
-## File organization
+## File organization & Utility Useage
 
 Files are organized in the src folder into 3 sub folders. These folders being Algorithms, Tests, and Utilities. 
 The main.cpp is not in any subfolder but is in the src folder.
