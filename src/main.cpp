@@ -18,13 +18,13 @@ using namespace std;
 
 int main() {
 
-    bubbleSortTest();
-    exchangeSortTest();
+    bubbleSortTest(); // This needs to be reviewed to see if its the algo from the book
+    exchangeSortTest(); // This needs to be reviewed to see if its the algo from the book
     // heapSortTest();
-    insertionSortTest();
+    insertionSortTest(); // This needs to be reviewed to see if its the algo from the book
     // mergeSortTest();
     // quickSortTest();
-    selectionSortTest();
+    selectionSortTest(); // This needs to be reviewed to see if its the algo from the book
 
     return 0;
 }
