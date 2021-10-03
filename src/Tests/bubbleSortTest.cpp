@@ -1,8 +1,8 @@
 #include <iostream>
 #include <iomanip>
-#include "..\Utilities\ArrayUtils.hpp"
-#include "..\Utilities\TimerUtils.hpp"
-#include "..\Algorithms\bubbleSort.hpp"
+#include "../Utilities/ArrayUtils.hpp"
+#include "../Utilities/TimerUtils.hpp"
+#include "../Algorithms/bubbleSort.hpp"
 
 using namespace ArrayUtils;
 using namespace TimerUtils;
