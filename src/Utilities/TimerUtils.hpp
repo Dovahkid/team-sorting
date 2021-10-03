@@ -45,7 +45,7 @@ namespace TimerUtils {
         int arr[] = {...} // imagine it has values
         int size = 10; // or any other size obviously
 
-        timer( [arr, size]() -> { insertionSort(arr, size) } )
+        timer( [arr, size]() -> void{ insertionSort(arr, size) } )
 
         this will run the insertionSort function and record the time it takes
 
