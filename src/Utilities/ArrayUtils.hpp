@@ -3,11 +3,6 @@
 #include <iostream>
 #include <random>
 
-using std::cout;
-using std::endl;
-using std::random_device;
-using std::mt19937;
-
 namespace ArrayUtils {
 
     // RandomModes for overloaded randomFillArray
@@ -41,8 +36,8 @@ namespace ArrayUtils {
     // default randomFillArray that takes in a max value for each item and the size of the array
     int* randomFillArray(int max, int size) {
         int *arr{new int[size]{}};
-        random_device rd;
-        mt19937 gen(rd());
+        std::random_device rd;
+        std::mt19937 gen(rd());
 
         for(int i = 0; i < size; i++) {
             arr[i] = gen() % (max+1);
@@ -55,8 +50,8 @@ namespace ArrayUtils {
     // This makes it a bit clearer when passing in all the settings for the function
     int* randomFillArray(RandomFillSettings settings) {
         int *arr{new int[settings.size]{}};
-        random_device rd;
-        mt19937 gen(rd());
+        std::random_device rd;
+        std::mt19937 gen(rd());
         int randomNum;
         int randomDuplicates;
 
@@ -114,7 +109,7 @@ namespace ArrayUtils {
     // Prints array by running through it
     void printArray(int* arr, int size) {
         for(int i = 0; i < size; i++)
-            cout << arr[i] << " ";
-        cout << endl;
+            std::cout << arr[i] << " ";
+        std::cout << std::endl;
     }
 }

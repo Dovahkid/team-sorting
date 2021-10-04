@@ -3,7 +3,6 @@
 void merge(int *arr, int low, int mid, int high);
 void mergeSort(int *arr, int low, int high);
 
-
 void merge(int *arr, int low, int mid, int high) {
     int i, j, k;
     int U[high-low+1];
