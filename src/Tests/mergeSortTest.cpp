@@ -2,7 +2,7 @@
 #include <iomanip>
 #include "../Utilities/ArrayUtils.hpp"
 #include "../Utilities/TimerUtils.hpp"
-#include "../Algorithms/MergeSort.hpp"
+#include "../Algorithms/mergeSort.hpp"
 
 using namespace ArrayUtils;
 using namespace TimerUtils;
