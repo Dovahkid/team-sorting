@@ -8,11 +8,12 @@ using namespace ArrayUtils;
 using namespace TimerUtils;
 using namespace std;
 
-void exchangeSortTest() {
-    RandomFillSettings randomFill { .size = 10000, .max = 10000, .mode = FULL_RANDOM }; // if youre using an error checker it will flag this line and similar lines as an error, just ignore that.
-    RandomFillSettings duplicateFill { .size = 10000, .max = 10000, .mode = DUPLICATES };
-    RandomFillSettings reverseFill { .size = 10000, .max = 10000, .mode = REVERSE_SORTED };
-    RandomFillSettings mostlySortedFill { .size = 10000, .max = 10000, .mode = MOSTLY_SORTED };
+void exchangeSortTest(int allSize, int allMax) {
+    
+    RandomFillSettings randomFill { .size = allSize, .max = allMax, .mode = FULL_RANDOM }; // if youre using an error checker it will flag this line and similar lines as an error, just ignore that.
+    RandomFillSettings duplicateFill { .size = allSize, .max = allMax, .mode = DUPLICATES };
+    RandomFillSettings reverseFill { .size = allSize, .max = allMax, .mode = REVERSE_SORTED };
+    RandomFillSettings mostlySortedFill { .size = allSize, .max = allMax, .mode = MOSTLY_SORTED };
 
     int *arr_random{ randomFillArray( randomFill ) };
     int *arr_duplicate{ randomFillArray( duplicateFill ) };
