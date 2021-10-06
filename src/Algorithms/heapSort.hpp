@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
- 
+#include "../Utilities/ArrayUtils.hpp"
+
 // To heapify a subtree rooted with node i which is
 // an index in arr[]. n is size of heap
 void heapify(int arr[], int n, int i)
@@ -19,8 +20,9 @@ void heapify(int arr[], int n, int i)
  
     // If largest is not root
     if (largest != i) {
-        swap(arr[i], arr[largest]);
- 
+        // std::swap(arr[i], arr[largest]);
+        ArrayUtils::swap(arr, i, largest);
+        
         // Recursively heapify the affected sub-tree
         heapify(arr, n, largest);
     }
@@ -36,7 +38,8 @@ void heapSort(int arr[], int n)
     // One by one extract an element from heap
     for (int i = n - 1; i > 0; i--) {
         // Move current root to end
-        swap(arr[0], arr[i]);
+        // std::swap(arr[0], arr[i]);
+        ArrayUtils::swap(arr, 0, i);
  
         // call max heapify on the reduced heap
         heapify(arr, i, 0);

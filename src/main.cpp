@@ -20,11 +20,11 @@ int main() {
 
     bubbleSortTest(size, max); // This needs to be reviewed to see if its the algo from the book
     exchangeSortTest(size, max); // This needs to be reviewed to see if its the algo from the book
-    heapSortTest(size, max);
     insertionSortTest(size, max); // This needs to be reviewed to see if its the algo from the book
+    selectionSortTest(size, max);
     mergeSortTest(size, max);
     quickSortTest(size, max);
-    selectionSortTest(size, max);
+    heapSortTest(size, max);
 
     return 0;
 }

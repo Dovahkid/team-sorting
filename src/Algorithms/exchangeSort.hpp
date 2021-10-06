@@ -1,4 +1,5 @@
 #pragma once
+// #include "../Utilities/ArrayUtils.hpp"
 
 void exchange(int *arr, int first, int second) {
     int temp = arr[second];
@@ -10,7 +11,8 @@ void exchangeSort(int *arr, int size) {
         for(int i = 0; i < size; i++) {
             for(int j = (1+i); j < size; j++) {
                 if(arr[i] > arr[j]) {
-                    exchange(arr, i, j);
+                    // exchange(arr, i, j);
+                    ArrayUtils::swap(arr,i,j);
                 }
             }
         }

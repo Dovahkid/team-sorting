@@ -27,10 +27,10 @@ namespace ArrayUtils {
         Implementations
     */
     // Swaps two values in passed array. Swaps at loc1 and loc2
-    void swap(int *arr, int loc1, int loc2) {
-        int temp = arr[loc1];
-        arr[loc1] = arr[loc2];
-        arr[loc2] = arr[loc1];
+    void swap(int *arr, int first, int second) {
+        int temp = arr[second];
+        arr[second] = arr[first];
+        arr[first] = temp;
     }
 
     // default randomFillArray that takes in a max value for each item and the size of the array

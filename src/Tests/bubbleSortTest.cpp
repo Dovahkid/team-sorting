@@ -4,12 +4,12 @@
 #include "../Utilities/TimerUtils.hpp"
 #include "../Algorithms/bubbleSort.hpp"
 
-using namespace ArrayUtils;
-using namespace TimerUtils;
-using namespace std;
 
 void bubbleSortTest(int allSize, int allMax) {
-    
+    using namespace ArrayUtils;
+    using namespace TimerUtils;
+    using namespace std;
+
     RandomFillSettings randomFill { .size = allSize, .max = allMax, .mode = FULL_RANDOM }; // if youre using an error checker it will flag this line and similar lines as an error, just ignore that.
     RandomFillSettings duplicateFill { .size = allSize, .max = allMax, .mode = DUPLICATES };
     RandomFillSettings reverseFill { .size = allSize, .max = allMax, .mode = REVERSE_SORTED };
@@ -20,13 +20,13 @@ void bubbleSortTest(int allSize, int allMax) {
     int *arr_reverse{ randomFillArray( reverseFill ) };
     int *arr_mostlySorted{ randomFillArray( mostlySortedFill ) };
 
-    cout << "\n<------= Bubble Sort =------>" << endl;
-
     // cout << "\nBefore Sort" << endl;
     // cout << "Random Fill: "; printArray(arr_random, randomFill.size);
     // cout << "Duplicate Fill: "; printArray(arr_duplicate, duplicateFill.size);
     // cout << "Reverse Fill: "; printArray(arr_reverse, reverseFill.size);
     // cout << "Mostly Sorted Fill: "; printArray(arr_mostlySorted, mostlySortedFill.size);
+
+    cout << "\n<------= Bubble Sort =------>" << endl;
 
     cout << "Full Random sort ";
     timer([arr_random, randomFill]()->void{
