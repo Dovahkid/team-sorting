@@ -32,6 +32,7 @@ void bubbleSortTest(int allSize, int allMax) {
     timer([arr_random, randomFill]()->void{
         bubbleSort(arr_random, randomFill.size);
         });
+        
 
     cout << "Duplicate random sort ";
     timer([arr_duplicate, duplicateFill]()->void{

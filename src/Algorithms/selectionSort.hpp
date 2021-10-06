@@ -1,13 +1,6 @@
 #pragma once
 using namespace std;
  
-void swap(int *xp, int *yp)
-{
-    int temp = *xp;
-    *xp = *yp;
-    *yp = temp;
-}
- 
 void selectionSort(int arr[], int n)
 {
     int i, j, min_idx;
@@ -22,7 +15,7 @@ void selectionSort(int arr[], int n)
             min_idx = j;
  
         // Swap the found minimum element with the first element
-        swap(&arr[min_idx], &arr[i]);
+        ArrayUtils::swap(arr, min_idx, i);
     }
 }
  
