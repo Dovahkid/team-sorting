@@ -16,15 +16,15 @@
 
 int main() {
 
-    int size = 10000, max = 1000;
+    int size = 10, max = 1000;
 
     bubbleSortTest(size, max); // This needs to be reviewed to see if its the algo from the book
     exchangeSortTest(size, max); // This needs to be reviewed to see if its the algo from the book
-    // heapSortTest(size, max);
+    heapSortTest(size, max);
     insertionSortTest(size, max); // This needs to be reviewed to see if its the algo from the book
     mergeSortTest(size, max);
-    // quickSortTest(size, max);
-    // selectionSortTest(size, max);
+    quickSortTest(size, max);
+    selectionSortTest(size, max);
 
     return 0;
 }

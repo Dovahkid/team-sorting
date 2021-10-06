@@ -1,8 +1,6 @@
 #pragma once
 #include <iostream>
  
-using namespace std;
- 
 // To heapify a subtree rooted with node i which is
 // an index in arr[]. n is size of heap
 void heapify(int arr[], int n, int i)
@@ -43,12 +41,4 @@ void heapSort(int arr[], int n)
         // call max heapify on the reduced heap
         heapify(arr, i, 0);
     }
-}
- 
-/* A utility function to print array of size n */
-void printArray(int arr[], int n)
-{
-    for (int i = 0; i < n; ++i)
-        cout << arr[i] << " ";
-    cout << "\n";
 }
