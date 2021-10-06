@@ -1,53 +1,42 @@
 #pragma once
-#include <iostream>
-using namespace std;
-// Swap two elements - Utility function  
-void swap(int* a, int* b) 
-{ 
-    int t = *a; 
-    *a = *b; 
-    *b = t; 
-} 
-   
-// partition the array using last element as pivot
-int partition (int arr[], int low, int high) 
-{ 
-    int pivot = arr[high];    // pivot 
-    int i = (low - 1);   
-   
-    for (int j = low; j <= high- 1; j++) 
-    { 
-        //if current element is smaller than pivot, increment the low element
-        //swap elements at i and j
-        if (arr[j] <= pivot) 
-        { 
-            i++;    // increment index of smaller element 
-            swap(&arr[i], &arr[j]); 
-        } 
-    } 
-    swap(&arr[i + 1], &arr[high]); 
-    return (i + 1); 
-} 
-   
-//quicksort algorithm
-void quickSort(int arr[], int low, int high) 
-{ 
-    if (low < high) 
-    { 
-        //partition the array 
-        int pivot = partition(arr, low, high); 
-   
-        //sort the sub arrays independently 
-        quickSort(arr, low, pivot - 1); 
-        quickSort(arr, pivot + 1, high); 
-    } 
-} 
-   
-void displayArray(int arr[], int size) 
-{ 
-    int i; 
-    for (i=0; i < size; i++) 
-        cout<<arr[i]<<"\t"; 
-      
-} 
-   
+#include <stdio.h>
+#include <stdlib.h>
+#define max 10001
+
+void quickSort(int a[],int l,int r,int *count);
+int partition(int a[],int l,int r);
+
+//quickSort function definition
+void quickSort(int a[],int l,int r,int *count)
+{
+    if(l<r-1)
+    {
+        *count=*count+r-l-1;
+        int q=partition(a,l,r); //finding the pivot position in sorted array
+        quickSort(a,l,q-1,count);     //recursive calling before pivot sub array
+        quickSort(a,q+1,r,count);     //recursive calling after pivot sub array
+    }
+}
+
+//partition function definition
+int partition(int a[],int l,int r)
+{
+    int j,temp,i=l+1;
+
+    for(j=l+1;j<r;j++)
+    {
+        //swap values if a[j]<=a[r](i.e. pivot)
+        if(a[j]<=a[l])
+        {
+            temp=a[j];
+            a[j]=a[i];
+            a[i]=temp;
+            i++;
+        }
+    }
+    //place pivot at its position by swapping
+    temp=a[i-1];
+    a[i-1]=a[l];
+    a[l]=temp;
+    return i;
+}
