@@ -33,6 +33,8 @@ void selectionSortTest(int allSize, int allMax) {
         selectionSort(arr_random, randomFill.size);
         });
     cout << "Compares: " << selectionSortCompares << endl;
+    cout << "Swaps: " << selectionNumberOfSwaps << endl;
+    selectionNumberOfSwaps = 0;
     selectionSortCompares = 0;
 
     cout << "Duplicate random sort ";
@@ -40,6 +42,8 @@ void selectionSortTest(int allSize, int allMax) {
         selectionSort(arr_duplicate, duplicateFill.size);
         });
     cout << "Compares: " << selectionSortCompares << endl;
+    cout << "Swaps: " << selectionNumberOfSwaps << endl;
+    selectionNumberOfSwaps = 0;
     selectionSortCompares = 0;
 
     cout << "Reverse random sort ";
@@ -47,6 +51,8 @@ void selectionSortTest(int allSize, int allMax) {
         selectionSort(arr_reverse, reverseFill.size);
         });
     cout << "Compares: " << selectionSortCompares << endl;
+    cout << "Swaps: " << selectionNumberOfSwaps << endl;
+    selectionNumberOfSwaps = 0;
     selectionSortCompares = 0;
 
     cout << "Mostly sorted random sort ";
@@ -54,6 +60,8 @@ void selectionSortTest(int allSize, int allMax) {
         selectionSort(arr_mostlySorted, mostlySortedFill.size);
         });
     cout << "Compares: " << selectionSortCompares << endl;
+    cout << "Swaps: " << selectionNumberOfSwaps << endl;
+    selectionNumberOfSwaps = 0;
     selectionSortCompares = 0;
 
     cout << "<------=================------>" << endl;
