@@ -1,42 +1,27 @@
 #pragma once
-#include <stdio.h>
-#include <stdlib.h>
-#define max 10001
 
-void quickSort(int a[],int l,int r,int *count);
-int partition(int a[],int l,int r);
+void partition(int *arr, int low, int high, int& pivotpoint) {
+    int i, j;
+    int pivotitem;
 
-//quickSort function definition
-void quickSort(int a[],int l,int r,int *count)
-{
-    if(l<r-1)
-    {
-        *count=*count+r-l-1;
-        int q=partition(a,l,r); //finding the pivot position in sorted array
-        quickSort(a,l,q-1,count);     //recursive calling before pivot sub array
-        quickSort(a,q+1,r,count);     //recursive calling after pivot sub array
-    }
-}
-
-//partition function definition
-int partition(int a[],int l,int r)
-{
-    int j,temp,i=l+1;
-
-    for(j=l+1;j<r;j++)
-    {
-        //swap values if a[j]<=a[r](i.e. pivot)
-        if(a[j]<=a[l])
-        {
-            temp=a[j];
-            a[j]=a[i];
-            a[i]=temp;
-            i++;
+    pivotitem = arr[low];
+    j = low;
+    for(i = low + 1; i <= high; i++) {
+        if(arr[i] < pivotitem) {
+            j++;
+            ArrayUtils::swap(arr, i, j);
         }
     }
-    //place pivot at its position by swapping
-    temp=a[i-1];
-    a[i-1]=a[l];
-    a[l]=temp;
-    return i;
+    pivotpoint = j;
+    ArrayUtils::swap(arr, low, pivotpoint);
+}
+
+void quickSort(int *arr, int low, int high) {
+    int pivotpoint;
+
+    if(high > low) {
+        partition(arr, low, high, pivotpoint);
+        quickSort(arr, low, pivotpoint-1);
+        quickSort(arr, pivotpoint+1, high);
+    } 
 }

@@ -18,7 +18,7 @@ namespace ArrayUtils {
     /*
         Prototypes
     */
-    int* randomFillArray(int max, int size);
+    int* randomFillArray(int size, int max);
     int* randomFillArray( RandomFillSettings );
     void printArray(int* arr, int size);
     void swap(int *arr, int loc1, int loc2);
@@ -34,7 +34,7 @@ namespace ArrayUtils {
     }
 
     // default randomFillArray that takes in a max value for each item and the size of the array
-    int* randomFillArray(int max, int size) {
+    int* randomFillArray(int size, int max) {
         int *arr{new int[size]{}};
         std::random_device rd;
         std::mt19937 gen(rd());
