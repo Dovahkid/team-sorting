@@ -1,5 +1,7 @@
 #pragma once
 
+int mergeSortCompares = 0;
+
 void merge(int *arr, int low, int mid, int high);
 void mergeSort(int *arr, int low, int high);
 
@@ -9,6 +11,7 @@ void merge(int *arr, int low, int mid, int high) {
 
     i = low; j = mid+1; k = 0;
     while(i <= mid && j <= high) {
+        mergeSortCompares++;
         if(arr[i] < arr[j]) {
             U[k] = arr[i];
             k++;
@@ -19,7 +22,7 @@ void merge(int *arr, int low, int mid, int high) {
             j++;
         }
     }
-
+    
     while(j <= high){
         U[k] = arr[j];
         j++;

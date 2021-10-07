@@ -32,22 +32,29 @@ void bubbleSortTest(int allSize, int allMax) {
     timer([arr_random, randomFill]()->void{
         bubbleSort(arr_random, randomFill.size);
         });
-        
+    cout << "Compares: " << bubbleSortCompares << endl;
+    bubbleSortCompares = 0;        
 
     cout << "Duplicate random sort ";
     timer([arr_duplicate, duplicateFill]()->void{
         bubbleSort(arr_duplicate, duplicateFill.size);
         });
+    cout << "Compares: " << bubbleSortCompares << endl;
+    bubbleSortCompares = 0;   
 
     cout << "Reverse random sort ";
     timer([arr_reverse, reverseFill]()->void{
         bubbleSort(arr_reverse, reverseFill.size);
         });
+    cout << "Compares: " << bubbleSortCompares << endl;
+    bubbleSortCompares = 0; 
 
     cout << "Mostly sorted random sort ";
     timer([arr_mostlySorted, mostlySortedFill]()->void{
         bubbleSort(arr_mostlySorted, mostlySortedFill.size);
         });
+    cout << "Compares: " << bubbleSortCompares << endl;
+    bubbleSortCompares = 0;
 
     cout << "<------=================------>" << endl;
 

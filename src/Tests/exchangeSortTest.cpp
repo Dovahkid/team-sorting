@@ -32,21 +32,29 @@ void exchangeSortTest(int allSize, int allMax) {
     timer([arr_random, randomFill]()->void{
         exchangeSort(arr_random, randomFill.size);
         });
+    cout << "Compares: " << exchangeSortCompares << endl;
+    exchangeSortCompares = 0;
 
     cout << "Duplicate random sort ";
     timer([arr_duplicate, duplicateFill]()->void{
         exchangeSort(arr_duplicate, duplicateFill.size);
         });
+    cout << "Compares: " << exchangeSortCompares << endl;
+    exchangeSortCompares = 0;
 
     cout << "Reverse random sort ";
     timer([arr_reverse, reverseFill]()->void{
         exchangeSort(arr_reverse, reverseFill.size);
         });
+    cout << "Compares: " << exchangeSortCompares << endl;
+    exchangeSortCompares = 0;
 
     cout << "Mostly sorted random sort ";
     timer([arr_mostlySorted, mostlySortedFill]()->void{
         exchangeSort(arr_mostlySorted, mostlySortedFill.size);
         });
+    cout << "Compares: " << exchangeSortCompares << endl;
+    exchangeSortCompares = 0;
 
     cout << "<------=================------>" << endl;
 

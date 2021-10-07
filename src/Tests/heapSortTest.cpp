@@ -32,21 +32,29 @@ void heapSortTest(int allSize, int allMax) {
     timer([arr_random, randomFill]()->void{
         heapSort(arr_random, randomFill.size);
         });
+    cout << "Compares: " << heapSortCompares << endl;
+    heapSortCompares = 0;
 
     cout << "Duplicate random sort ";
     timer([arr_duplicate, duplicateFill]()->void{
         heapSort(arr_duplicate, duplicateFill.size);
         });
+    cout << "Compares: " << heapSortCompares << endl;
+    heapSortCompares = 0;
 
     cout << "Reverse random sort ";
     timer([arr_reverse, reverseFill]()->void{
         heapSort(arr_reverse, reverseFill.size);
         });
+    cout << "Compares: " << heapSortCompares << endl;
+    heapSortCompares = 0;
 
     cout << "Mostly sorted random sort ";
     timer([arr_mostlySorted, mostlySortedFill]()->void{
         heapSort(arr_mostlySorted, mostlySortedFill.size);
         });
+    cout << "Compares: " << heapSortCompares << endl;
+    heapSortCompares = 0;
 
     cout << "<------=================------>" << endl;
 

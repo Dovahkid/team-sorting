@@ -33,21 +33,29 @@ void insertionSortTest(int allSize, int allMax) {
     timer([arr_random, randomFill]()->void{
         insertionSort(arr_random, randomFill.size);
         });
+    cout << "Compares: " << insertionSortCompares << endl;
+    insertionSortCompares = 0;
 
     cout << "Duplicate random sort ";
     timer([arr_duplicate, duplicateFill]()->void{
         insertionSort(arr_duplicate, duplicateFill.size);
         });
+    cout << "Compares: " << insertionSortCompares << endl;
+    insertionSortCompares = 0;
 
     cout << "Reverse random sort ";
     timer([arr_reverse, reverseFill]()->void{
         insertionSort(arr_reverse, reverseFill.size);
         });
+    cout << "Compares: " << insertionSortCompares << endl;
+    insertionSortCompares = 0;
 
     cout << "Mostly sorted random sort ";
     timer([arr_mostlySorted, mostlySortedFill]()->void{
         insertionSort(arr_mostlySorted, mostlySortedFill.size);
         });
+    cout << "Compares: " << insertionSortCompares << endl;
+    insertionSortCompares = 0;
 
     cout << "<------=================------>" << endl;
 

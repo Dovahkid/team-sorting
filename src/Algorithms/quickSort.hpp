@@ -1,5 +1,7 @@
 #pragma once
 
+int quickSortCompares = 0;
+
 void partition(int *arr, int low, int high, int& pivotpoint) {
     int i, j;
     int pivotitem;
@@ -7,6 +9,7 @@ void partition(int *arr, int low, int high, int& pivotpoint) {
     pivotitem = arr[low];
     j = low;
     for(i = low + 1; i <= high; i++) {
+        quickSortCompares++;
         if(arr[i] < pivotitem) {
             j++;
             ArrayUtils::swap(arr, i, j);

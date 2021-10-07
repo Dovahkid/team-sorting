@@ -32,21 +32,29 @@ void selectionSortTest(int allSize, int allMax) {
     timer([arr_random, randomFill]()->void{
         selectionSort(arr_random, randomFill.size);
         });
+    cout << "Compares: " << selectionSortCompares << endl;
+    selectionSortCompares = 0;
 
     cout << "Duplicate random sort ";
     timer([arr_duplicate, duplicateFill]()->void{
         selectionSort(arr_duplicate, duplicateFill.size);
         });
+    cout << "Compares: " << selectionSortCompares << endl;
+    selectionSortCompares = 0;
 
     cout << "Reverse random sort ";
     timer([arr_reverse, reverseFill]()->void{
         selectionSort(arr_reverse, reverseFill.size);
         });
+    cout << "Compares: " << selectionSortCompares << endl;
+    selectionSortCompares = 0;
 
     cout << "Mostly sorted random sort ";
     timer([arr_mostlySorted, mostlySortedFill]()->void{
         selectionSort(arr_mostlySorted, mostlySortedFill.size);
         });
+    cout << "Compares: " << selectionSortCompares << endl;
+    selectionSortCompares = 0;
 
     cout << "<------=================------>" << endl;
 

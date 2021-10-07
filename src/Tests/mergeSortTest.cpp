@@ -32,21 +32,29 @@ void mergeSortTest(int allSize, int allMax) {
     timer([arr_random, randomFill]()->void{
         mergeSort(arr_random, 0, randomFill.size-1);
         });
+    cout << "Compares: " << mergeSortCompares << endl;
+    mergeSortCompares = 0;
 
     cout << "Duplicate random sort ";
     timer([arr_duplicate, duplicateFill]()->void{
         mergeSort(arr_duplicate, 0, duplicateFill.size-1);
         });
+    cout << "Compares: " << mergeSortCompares << endl;
+    mergeSortCompares = 0;
 
     cout << "Reverse random sort ";
     timer([arr_reverse, reverseFill]()->void{
         mergeSort(arr_reverse, 0, reverseFill.size-1);
         });
+    cout << "Compares: " << mergeSortCompares << endl;
+    mergeSortCompares = 0;
 
     cout << "Mostly sorted random sort ";
     timer([arr_mostlySorted, mostlySortedFill]()->void{
         mergeSort(arr_mostlySorted, 0, mostlySortedFill.size-1);
         });
+    cout << "Compares: " << mergeSortCompares << endl;
+    mergeSortCompares = 0;
 
     cout << "<------=================------>" << endl;
 

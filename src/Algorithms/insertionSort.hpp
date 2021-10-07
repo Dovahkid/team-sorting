@@ -1,10 +1,13 @@
 #pragma once
 
+int insertionSortCompares = 0;
+
 void insertionSort(int arr[], int length) {
     int i, j, key;
     bool reverseSorted = true;
 
-    for(int a = 0; a < length-1; a++) {
+    for(int a = 0; a < length-1; a++) {  
+        insertionSortCompares++;
         if(!(arr[a] > arr[a+1]))
             reverseSorted = false;
     }
@@ -21,6 +24,7 @@ void insertionSort(int arr[], int length) {
         for (i = 1; i < length; i++) {
             j = i;
             while (j > 0 && arr[j - 1] > arr[j]) {
+                insertionSortCompares++;
                 key = arr[j];
                 arr[j] = arr[j - 1];
                 arr[j - 1] = key;
