@@ -14,19 +14,29 @@ namespace TimerUtils {
     struct Timer {
 
         std::chrono::high_resolution_clock::time_point start, end;
-        std::chrono::duration<double> duration;
+        std::chrono::duration<double, std::milli> duration;
 
         Timer() {
             start = std::chrono::high_resolution_clock::now();
         }
 
         ~Timer() {
+            std::cout << std::fixed;
             end = std::chrono::high_resolution_clock::now();
-            duration = end - start;
+            duration = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
 
-            std::cout << "Took " << duration.count() * 1000 << " milliseconds." << std::endl;
+            std::cout << "Took " << duration.count() << " milliseconds." << std::endl;
         }
     };
+
+    template<typename T>
+    void timer(T&& func) {
+
+        Timer timer;
+        func();
+    }
+
+}
 
     /*
         This function allows you to pass in a lambda function containing your function
@@ -49,11 +59,3 @@ namespace TimerUtils {
         this will run the insertionSort function and record the time it takes
 
     */
-    template<typename T>
-    void timer(T&& func) {
-
-        Timer timer;
-        func();
-    }
-
-}
