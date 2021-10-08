@@ -13,6 +13,7 @@
 #include "./Tests/mergeSortTest.cpp"
 #include "./Tests/quickSortTest.cpp"
 #include "./Tests/selectionSortTest.cpp"
+    #include "./Utilities/ArrayUtils.hpp"
 
 int main() {
 
