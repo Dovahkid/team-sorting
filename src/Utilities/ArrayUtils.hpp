@@ -54,6 +54,8 @@ namespace ArrayUtils {
         std::mt19937 gen(rd());
         int randomNum;
         int randomDuplicates;
+        int randomPlace;
+        int randomPlace2;
 
         switch(settings.mode) {
             
@@ -65,7 +67,9 @@ namespace ArrayUtils {
                 for(int i = 0; i < settings.size; i++) {
                     arr[i] = randomNum++;
                 }
-                swap(arr, 0, settings.size-1);
+                randomPlace = gen() % (settings.size);
+                randomPlace2 = gen() % (settings.size);
+                swap(arr, randomPlace, randomPlace2);
             break;
             
             // Creates a reverse sorted array by picking a random number 
