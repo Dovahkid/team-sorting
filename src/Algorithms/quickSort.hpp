@@ -26,5 +26,5 @@ void quickSort(int *arr, int low, int high) {
         partition(arr, low, high, pivotpoint);
         quickSort(arr, low, pivotpoint-1);
         quickSort(arr, pivotpoint+1, high);
-    } 
+    }
 }
