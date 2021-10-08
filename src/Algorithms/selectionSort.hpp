@@ -2,6 +2,7 @@
 using namespace std;
  
 int selectionSortCompares = 0;
+int selectionNumberOfSwaps = 0;
 
 void selectionSort(int arr[], int n)
 {
@@ -20,6 +21,7 @@ void selectionSort(int arr[], int n)
             
         // Swap the found minimum element with the first element
         ArrayUtils::swap(arr, min_idx, i);
+        selectionNumberOfSwaps++;
     }
 }
  

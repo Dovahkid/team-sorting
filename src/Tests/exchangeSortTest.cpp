@@ -33,6 +33,8 @@ void exchangeSortTest(int allSize, int allMax) {
         exchangeSort(arr_random, randomFill.size);
         });
     cout << "Compares: " << exchangeSortCompares << endl;
+    cout << "Swaps: " << exchangeNumberOfSwaps << endl;
+    exchangeNumberOfSwaps = 0;
     exchangeSortCompares = 0;
 
     cout << "Duplicate random sort ";
@@ -40,6 +42,8 @@ void exchangeSortTest(int allSize, int allMax) {
         exchangeSort(arr_duplicate, duplicateFill.size);
         });
     cout << "Compares: " << exchangeSortCompares << endl;
+    cout << "Swaps: " << exchangeNumberOfSwaps << endl;
+    exchangeNumberOfSwaps = 0;
     exchangeSortCompares = 0;
 
     cout << "Reverse random sort ";
@@ -47,6 +51,8 @@ void exchangeSortTest(int allSize, int allMax) {
         exchangeSort(arr_reverse, reverseFill.size);
         });
     cout << "Compares: " << exchangeSortCompares << endl;
+    cout << "Swaps: " << exchangeNumberOfSwaps << endl;
+    exchangeNumberOfSwaps = 0;
     exchangeSortCompares = 0;
 
     cout << "Mostly sorted random sort ";
@@ -54,6 +60,8 @@ void exchangeSortTest(int allSize, int allMax) {
         exchangeSort(arr_mostlySorted, mostlySortedFill.size);
         });
     cout << "Compares: " << exchangeSortCompares << endl;
+    cout << "Swaps: " << exchangeNumberOfSwaps << endl;
+    exchangeNumberOfSwaps = 0;
     exchangeSortCompares = 0;
 
     cout << "<------=================------>" << endl;

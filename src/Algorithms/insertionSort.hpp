@@ -24,7 +24,7 @@ void insertionSort(int arr[], int length) {
         for (i = 1; i < length; i++) {
             j = i;
             while (j > 0 && arr[j - 1] > arr[j]) {
-                insertionSortCompares++;
+                // insertionSortCompares++;
                 key = arr[j];
                 arr[j] = arr[j - 1];
                 arr[j - 1] = key;
