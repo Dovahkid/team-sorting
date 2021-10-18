@@ -19,7 +19,7 @@ int main() {
 
     int size = 10000, max = 1000;
 
-    bubbleSortTest(size, max); // This needs to be reviewed to see if its the algo from the book
+	bubbleSortTest(size, max); // This needs to be reviewed to see if its the algo from the book
     exchangeSortTest(size, max); // This needs to be reviewed to see if its the algo from the book
     insertionSortTest(size, max); // This needs to be reviewed to see if its the algo from the book
     selectionSortTest(size, max);

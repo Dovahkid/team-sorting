@@ -29,14 +29,6 @@ namespace TimerUtils {
         }
     };
 
-    template<typename T>
-    void timer(T&& func) {
-
-        Timer timer;
-        func();
-    }
-
-}
 
     /*
         This function allows you to pass in a lambda function containing your function
@@ -57,5 +49,12 @@ namespace TimerUtils {
         timer( [arr, size]() -> void{ insertionSort(arr, size) } )
 
         this will run the insertionSort function and record the time it takes
-
     */
+    template<typename T>
+    void timer(T&& func) {
+
+        Timer timer;
+        func();
+    }
+
+}
