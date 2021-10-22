@@ -14,7 +14,7 @@ namespace TimerUtils {
     struct Timer {
 
         std::chrono::high_resolution_clock::time_point start, end;
-        std::chrono::duration<double, std::milli> duration;
+        std::chrono::duration<double, std::nano> duration;
 
         Timer() {
             start = std::chrono::high_resolution_clock::now();
@@ -23,9 +23,9 @@ namespace TimerUtils {
         ~Timer() {
             std::cout << std::fixed;
             end = std::chrono::high_resolution_clock::now();
-            duration = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
+            duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end-start);
 
-            std::cout << "Took " << duration.count() << " milliseconds." << std::endl;
+            std::cout << "Took " << duration.count()/pow(10,6) << " milliseconds." << std::endl;
         }
     };
 
