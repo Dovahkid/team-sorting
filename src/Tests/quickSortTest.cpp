@@ -20,11 +20,11 @@ void quickSortTest(int allSize, int allMax) {
     int *arr_reverse{ randomFillArray( reverseFill ) };
     int *arr_mostlySorted{ randomFillArray( mostlySortedFill ) };
 
-    // cout << "Before sort" << endl;
-    // cout << "Random Fill: "; printArray(arr_random, randomFill.size);
-    // cout << "Duplicate Fill: "; printArray(arr_duplicate, duplicateFill.size);
-    // cout << "Reverse Fill: "; printArray(arr_reverse, reverseFill.size);
-    // cout << "Mostly Filled Fill: "; printArray(arr_mostlySorted, mostlySortedFill.size);
+    cout << "Before sort" << endl;
+    cout << "Random Fill: "; printArray(arr_random, randomFill.size);
+    cout << "Duplicate Fill: "; printArray(arr_duplicate, duplicateFill.size);
+    cout << "Reverse Fill: "; printArray(arr_reverse, reverseFill.size);
+    cout << "Mostly Sorted Fill: "; printArray(arr_mostlySorted, mostlySortedFill.size);
 
     cout << "\n<------= Quick Sort =------>" << endl;
 
@@ -58,9 +58,9 @@ void quickSortTest(int allSize, int allMax) {
 
     cout << "<------=================------>" << endl;
 
-    // cout << "\nAfter sort" << endl;
-    // cout << "Random Fill: "; printArray(arr_random, randomFill.size);
-    // cout << "Duplicate Fill: "; printArray(arr_duplicate, duplicateFill.size);
-    // cout << "Reverse Fill: "; printArray(arr_reverse, reverseFill.size);
-    // cout << "Mostly Sorted Fill: "; printArray(arr_mostlySorted, mostlySortedFill.size);
+    cout << "\nAfter sort" << endl;
+    cout << "Random Fill: "; printArray(arr_random, randomFill.size);
+    cout << "Duplicate Fill: "; printArray(arr_duplicate, duplicateFill.size);
+    cout << "Reverse Fill: "; printArray(arr_reverse, reverseFill.size);
+    cout << "Mostly Sorted Fill: "; printArray(arr_mostlySorted, mostlySortedFill.size);
 }

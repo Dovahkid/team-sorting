@@ -28,7 +28,7 @@ int* fillArrayWithSet() {
 
 int main() {
 	using TimerUtils::timer;
-    // int size = 1000000, max = 1000;
+    // int size = 10, max = 1000;
 
 	// bubbleSortTest(size, max); // This needs to be reviewed to see if its the algo from the book
     // exchangeSortTest(size, max); // This needs to be reviewed to see if its the algo from the book
